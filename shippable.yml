@@ -12,8 +12,7 @@ before_script:
   - mkdir -p shippable/codecoverage
 
 script:
-  - cp shippable.yml shippable/testresults
-  - nosetests test.py --with-xunit --xunit-file=shippable/testresults/shippable.yml
+  - nosetests test.py --with-xunit --xunit-file=shippable/testresults/nosetests.yml
   - which python && coverage run --branch test.py
   - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
 
