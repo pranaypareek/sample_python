@@ -1,0 +1,14 @@
+#shippable dir
+resources:
+  - name: apiImage-2
+    type: image
+    integration: pranay-docker
+    source:
+      name: "shipimg/api2"
+      isPull: false
+  - name: wwwImage-2
+    type: image
+    integration: pranay-docker
+    source:
+      name: "shipimg/www2"
+      isPull: true
